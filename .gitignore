@@ -6,3 +6,5 @@
 *.synctex.gz
 *.txt
 *.tex
+*.nav
+*.snm
