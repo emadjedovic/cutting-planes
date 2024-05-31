@@ -3,7 +3,7 @@ import lippy as lp
 
 # ------------------------------------------------------------
 
-# PRIMJER
+# PRIMJER I
 # funkcija cilja Z = 3x1 + 3x2 + 7x3
 
 c_vektor = [3, 3, 7]
@@ -24,6 +24,30 @@ rjesenje = gomory.solve()
 print()
 print("Optimalne vrijednosti varijabli: ", rjesenje[0])
 print("Vrijednost funkcije cilja: ", rjesenje[1])
+
+# ------------------------------------------------------------
+
+# PRIMJER II
+# funkcija cilja Z = 7x1 + 9x2
+
+c_vektor = [7, 9]
+
+# ogranicenja
+
+a_matrica = [
+    [-1, 3],
+    [7, 1]]
+b_vektor = [6, 35]
+
+gomory = lp.CuttingPlaneMethod(c_vektor, a_matrica, b_vektor)
+rjesenje = gomory.solve()
+
+# ispis rezultata
+
+print()
+print("Optimalne vrijednosti varijabli: ", rjesenje[0])
+print("Vrijednost funkcije cilja: ", rjesenje[1])
+
 
 # ------------------------------------------------------------
 
